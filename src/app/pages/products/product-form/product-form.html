@@ -1,0 +1,54 @@
+
+<h2>{{ isEditMode ? 'Edit Product' : 'New Product' }}</h2>
+
+
+<form class="form" [formGroup]="form" (ngSubmit)="save()">
+  <div class="row">
+    <label>Name</label>
+    <input type="text" formControlName="name" placeholder="e.g., USB-C Charger 65W" />
+    <small class="error" *ngIf="nameCtrl.dirty && nameCtrl.invalid">
+    Name is required (min 2 chars).
+    </small>
+  </div>
+
+  <div class="row">
+    <label>SKU</label>
+    <input type="text" formControlName="sku" placeholder="e.g., CHG-65W-USBC" />
+    <small class="error" *ngIf="skuCtrl.dirty && skuCtrl.invalid">
+    SKU is required (min 3 chars).
+    </small>
+  </div>
+
+  <div class="row">
+    <label>Category</label>
+    <input type="text" formControlName="category" placeholder="e.g., Accessories" />
+    <small class="error" *ngIf="categoryCtrl.dirty && categoryCtrl.invalid">
+    Category is required.
+    </small>
+  </div>
+
+  <div class="row two">
+    <div>
+      <label>Price</label>
+      <input type="number" formControlName="price" />
+    </div>
+
+    <div>
+      <label>Quantity On Hand</label>
+      <input type="number" formControlName="quantityOnHand" />
+    </div>
+  </div>
+
+  <div class="row">
+    <label>Status</label>
+    <select formControlName="status">
+      <option value="ACTIVE">ACTIVE</option>
+      <option value="DISCONTINUED">DISCONTINUED</option>
+    </select>
+  </div>
+
+  <div class="actions">
+    <a class="btn secondary" routerLink="/products">Cancel</a>
+    <button class="btn primary" type="submit">Save</button>
+  </div>
+</form>

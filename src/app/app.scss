@@ -1,0 +1,32 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  gap: 14px;
+
+  a {
+    text-decoration: none;
+    color: #111827;
+    padding: 6px 10px;
+    border-radius: 8px;
+  }
+
+  a.active {
+    background: #f3f4f6;
+  }
+}
+
+.app-main {
+  padding: 18px;
+}

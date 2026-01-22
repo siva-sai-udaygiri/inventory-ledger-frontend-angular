@@ -1,0 +1,48 @@
+<h1>Products</h1>
+
+<div class="toolbar">
+  <input
+    type="search"
+    class="search"
+    placeholder="Search name / SKU / category..."
+    [value]="searchTerm"
+    (input)="onSearch($event)"
+  />
+
+  <a class="btn primary" routerLink="/products/new">+ New Product</a>
+</div>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>SKU</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>On Hand</th>
+    <th>Status</th>
+    <th>Updated</th>
+    <th class="actions">Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let p of filteredProducts; trackBy: trackById">
+    <td>{{ p.name }}</td>
+    <td>{{ p.sku }}</td>
+    <td>{{ p.category }}</td>
+    <td>{{ p.price | currency }}</td>
+    <td>{{ p.quantityOnHand }}</td>
+    <td>{{ p.status }}</td>
+    <td>{{ p.updatedAt | date: 'medium' }}</td>
+    <td class="actions">
+      <a [routerLink]="['/products', p.id, 'edit']">Edit</a>
+      <button type="button" class="link danger" (click)="onDelete(p.id)">Delete</button>
+    </td>
+  </tr>
+
+  <tr *ngIf="filteredProducts.length === 0">
+    <td class="empty" colspan="8">No products found.</td>
+  </tr>
+  </tbody>
+</table>
