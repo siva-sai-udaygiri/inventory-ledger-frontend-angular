@@ -1,59 +1,41 @@
-# InventoryLedgerUi
+# Inventory Ledger UI (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.1.
+A lightweight Inventory Ledger (front-end) built with Angular.  
+It provides a simple **Products** module with CRUD operations and **client-side search** to manage items such as electronics/accessories with fields like SKU, category, price, quantity, and status.
 
-## Development server
+## Key Features
 
-To start a local development server, run:
+- **Products List**
+  - Displays products in a table (Name, SKU, Category, Price, Qty, Status)
+  - Actions: **Edit** and **Delete**
+- **Create / Edit Product**
+  - Add new products
+  - Update existing products
+- **Search / Filter**
+  - Search products by **name / SKU / category** (client-side)
+- **Local persistence**
+  - Product data is stored locally (browser) so refresh keeps your data
 
+## Tech Stack
+
+- **Angular** (Angular CLI)
+- **TypeScript**
+- **SCSS**
+- Browser storage for persistence
+
+## Getting Started (Run Locally)
+
+### Prerequisites
+- **Node.js** (LTS recommended)
+- **npm**
+- **Angular CLI** (optional if you use `npx`)
+
+### Install & Run
 ```bash
+# 1) Install dependencies
+npm install
+
+# 2) Start the app
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
