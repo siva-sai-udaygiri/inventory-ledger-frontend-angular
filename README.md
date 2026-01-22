@@ -17,11 +17,11 @@ It provides a simple **Products** module with CRUD operations and **client-side 
   - Product data is stored locally (browser) so refresh keeps your data
 
 ## Tech Stack
-
-- **Angular** (Angular CLI)
-- **TypeScript**
-- **SCSS**
-- Browser storage for persistence
+- Angular (Angular CLI)
+- TypeScript
+- SCSS
+- Angular Router
+- Reactive Forms
 
 ## Getting Started (Run Locally)
 
@@ -37,5 +37,6 @@ npm install
 
 # 2) Start the app
 ng serve
+
 
 
